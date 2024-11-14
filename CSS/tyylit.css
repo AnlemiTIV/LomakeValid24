@@ -1,0 +1,98 @@
+form *{
+    box-sizing:border-box;
+    line-height: 1.3; /*säätää myös span:in sijaintia, esim sukupuolen spanissa*/
+}
+
+.samaPosition {
+    display: flex;
+    flex-direction: column;
+    height: 74px;
+}
+
+/*Input kenttien leveys*/
+.samaPosition > *{
+
+    align-self: flex-start;
+    height: 50px;
+}
+
+.samaPosition2 > span {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+body {
+    background-color: rgb(233, 222, 222);
+    padding: 10px;
+    width: 900px;
+    /*display: block*/
+}
+
+.kaikki {
+    padding: 10px 0px 0px 10px;
+    margin: 2px 0px 5px 10px;
+
+}
+
+.kaikki label {
+    color: black;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+
+br {
+    margin: 2px;
+}
+
+form label {
+    margin: 3px;
+    margin-right: 2px;
+    
+}
+
+form input {
+    padding: 2px 0px 2px 3px;
+    margin: 0px 0px 0px 0px;
+    text-align: left; /*jos right, kirjoitus alkaa oikealta*/
+    color: black; 
+    border: 1px solid #000000;
+}
+
+
+#painike2 {
+    padding:6px;
+    color:black;
+    position:relative;
+    margin: 20px 0px 0px 80px;
+}
+
+.lisatieto2 {
+    width: 100%;
+
+}
+
+form select {
+    background-color: white;
+    width: 160px;
+}
+
+.lisatietoLuokkaDiv {
+    display: flex;
+    align-items: start;
+    max-width: 50px;
+} 
+
+
+/*Spanin virheilmoitus, piilossa*/
+.virheSpan {
+    color: red;
+    padding-top: 1px;
+    display: flex;
+    visibility: visible;
+    font-size: 0.9em;
+}

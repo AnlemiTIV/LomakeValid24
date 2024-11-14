@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CSS/tyylit.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomakkeen Validointi</title>
+</head>
+<body>
+
+    <h1 style="padding: 15px 0px 5px 10px;margin:10px;">Rekisteröitymislomake</h1>
+
+    <div class="kaikki"> <!--action="action_page.php"..........method="post"-->
+        
+        <form name = "myForm" id="myForm2" onsubmit=validoiLomake(event)> <!--"return validoi...()" -->
+            
+            <div class="samaPosition">
+                <label for="userId2">Käyttäjä ID:</label>
+                <input type="text" name="userId" class="virheIlmoitusInput2 ilmoitusVirhe3" id="userId2" placeholder="identity">
+                <span class="virheSpan" id="wrongId" style="color: red;"></span><br>
+            </div>
+
+            <div class="samaPosition">
+                <label for="salasana2">Salasana:</label> 
+                <input type="password" name="password" class="virheIlmoitusInput2 ilmoitusVirhe3" id="salasana2" placeholder="salasana">
+                <span class="virheSpan" id="wrongPW" style="color: red;"></span><br>
+            </div>
+            
+            <div class="samaPosition">
+                <label for="nimi2">Nimi:</label> 
+                <input type="text" name="nimi" class="virheIlmoitusInput2 ilmoitusVirhe3" id="nimi2" placeholder="Esimerkki">
+                <span class="virheSpan" id="wrongNimi" style="color: red;"></span><br>
+            </div>
+
+            <div class="samaPosition">
+                <label for="osoite2">Osoite:</label>
+                <input type="text" name="osoite" class="virheIlmoitusInput2 ilmoitusVirhe3" id="osoite2" placeholder="maatie 123">
+                <span class="virheSpan" id="wrongOsoite" style="color: red;"></span><br>
+            </div> 
+
+            <div class="samaPosition" style="height: 80px;">
+                <label for="maat2">Maa:</label>
+                <select name="maa" class="virheIlmoitusInput2 ilmoitusVirhe3" id="maat2">
+                    <option selected="selected">(Valitse Maa)</option>
+                    <option>Suomi</option>
+                    <option>Ruotsi</option>
+                    <option>Muu kieli</option>
+                </select>
+                <span class="virheSpan" id="wrongMaa" style="color: red; margin: 0px; padding: 0px;"></span>
+            </div>
+
+            <div class="samaPosition">
+                <label for="postiNum2">Postinumero:</label>
+                <input type="text" name="postinumero" class="virheIlmoitusInput2 ilmoitusVirhe3" id="postiNum2" placeholder="12345">
+                <span class="virheSpan" id="wrongPostNum" style="color: red;"></span><br>
+            </div>
+
+            <div class="samaPosition">
+                <label for="sahkoposti2">Sähköposti:</label> 
+                <input type="text" name="sahkoposti" class="virheIlmoitusInput2 ilmoitusVirhe3" id="sahkoposti2" placeholder="esimerkki@gmail.com">
+                <span class="virheSpan" id="wrongSposti" style="color: red;"></span><br>
+            </div>
+
+            <div class="samaPosition2" style="height: 40px;">
+                <label for="mies2">Sukupuoli:</label>
+                <label for="mies2">Mies</label>
+                <input type="radio" name="sukupuoli5" class="virheIlmoitusInput2 ilmoitusVirhe3" id="mies2">
+                <label for="nainen2">Nainen</label>
+                <input type="radio" name="sukupuoli5" class="virheIlmoitusInput2 ilmoitusVirhe3" id="nainen2">
+                <span class="virheSpan" id="wrongSukupuoli" style="color:red;"></span>
+            </div>
+
+            <div class="samaPosition2" style="height: 50px">
+                <label for="suomi2">Kieli:</label> 
+                <label for="suomi2">Suomi</label>
+                <input type="checkbox" name="suomi1" class="virheIlmoitusInput2 ilmoitusVirhe3" id="suomi2">
+                <label for="muukieli2">Muu kuin suomi</label>
+                <input type="checkbox" name="muukieli1" class="virheIlmoitusInput2 ilmoitusVirhe3" id="muukieli2"><br>
+                <span class="virheSpan" id="wrongKieli" style="color:red;"></span>
+            </div>
+            
+            <div class="lisatietoLuokkaDiv">
+                <label for="lisatieto2" id="lisatietoLabel">Lisätietoja:</label>
+
+                <textarea placeholder="Kirjoita tänne..." rows="5" cols="40" name="lisatieto" id="lisatieto2"></textarea><br>
+            </div>
+            
+            <div class="samaPosition2">
+                <input type="submit" value="Lähetä" id="painike2">
+            </div>        
+        </form>            
+    </div>
+    <script src= "JS/koodi.js"></script>    
+</body>
+</html>
